@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace AnimalPerspective
 {
-    public class Animal
+    public interface IMammal
     {
-        public virtual string Sound()
-        {
-            return "Sound will be";
-        }
+        int NumberOfNipples{ get; }
     }
 }

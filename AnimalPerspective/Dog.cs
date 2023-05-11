@@ -5,11 +5,17 @@ using System.Threading.Tasks;
 
 namespace AnimalPerspective
 {
-    public class Dog : Animal
+    public class Dog : Animal, IMammal
     {
+        public int NumberOfNipples { get; }
+
+        public Dog()
+        {
+            NumberOfNipples = 10;
+        }
         public override string Sound()
         {
-            return "Woof";
+            return base.Sound() + "Woof";
         }
     }
 }
