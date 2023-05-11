@@ -16,7 +16,7 @@ namespace AnimalPerspective
 
         public override string Sound()
         {
-            return "<Buzz>";
+            return base.Sound() + "<Buzz>";
         }
     }
 }

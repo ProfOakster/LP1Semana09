@@ -9,7 +9,7 @@ namespace AnimalPerspective
     {
         public virtual string Sound()
         {
-            return "Sound will be";
+            return "Sound will be ";
         }
     }
 }
