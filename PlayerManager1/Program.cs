@@ -117,9 +117,10 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            foreach (Player p in playersToList)
+            {
+                Console.WriteLine($"{p.Name} - Score: {p.Score}");
+            }
         }
 
         /// <summary>
@@ -127,9 +128,13 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ListPlayersWithScoreGreaterThan()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            IEnumerable<Player> goodPlayers;
+
+            Console.WriteLine("Insert baseline score:");
+            int baseScore = Console.ReadLine();
+
+            goodPlayers=GetPlayersWithScoreGreaterThan(baseScore);
+            ListPlayers(goodPlayers);
         }
 
         /// <summary>
@@ -141,9 +146,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            
         }
     }
 }
