@@ -101,7 +101,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
             Console.WriteLine("Insert player name:");
             string newName = Console.ReadLine();
             Console.WriteLine("Insert player score:");
-            string newScore = Console.ReadLine();
+            int newScore = int.Parse(Console.ReadLine());
 
             playerList.Add(new Player(newName, newScore));
         }
@@ -131,7 +131,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
             IEnumerable<Player> goodPlayers;
 
             Console.WriteLine("Insert baseline score:");
-            int baseScore = Console.ReadLine();
+            int baseScore = int.Parse(Console.ReadLine());
 
             goodPlayers=GetPlayersWithScoreGreaterThan(baseScore);
             ListPlayers(goodPlayers);
@@ -146,9 +146,10 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
+            ICollection<Player> goodPlayers = new List<Player>();
             foreach (Player p in playerList)
             {
-                ICollection<Player> goodPlayers = new List<Player>();
+                
                 if (p.Score>minScore)
                 {
                     goodPlayers.Add(p);
